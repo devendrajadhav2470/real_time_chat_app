@@ -1,4 +1,8 @@
-const io = require('socket.io')(8000);
+const io = require('socket.io')(8000,{
+    cors:{
+        origin:['http://localhost:5500'],
+    },
+});
 const users = {};
  io.on('connection',socket=>{
     socket.on('new-user-joined',name=>{
@@ -13,4 +17,4 @@ const users = {};
 
 
 
- })
+ }) 
