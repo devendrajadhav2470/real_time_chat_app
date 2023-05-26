@@ -6,10 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer src="/nodeserver/index.js"></script>
+    <!-- <script defer src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script> -->
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            border: 3px solid green;
+            background:linear-gradient(white,rgb(77, 77, 236)) ;
+            width: 60%;
+            margin: auto;
+            min-height: 60vh;
+            margin-bottom:30px;
+            overflow-y: auto;
+
+        }
+        .logo{
+            width:60%;
+            height: 100px;
+            border: 2px solid red;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .logo img{
+            width: 100px;
+        }
+        .right{
+            width: 35%;
+            margin-top: 10px;
+            border: 2px solid blue;
+            background-color: antiquewhite;
+            float: right;
+            clear: both;
+            color:rgb(0, 0, 0);
+            border-radius: 15px;
+            opacity: 0.9;
+        }
+        .left{
+            width: 35%;
+            margin-top: 10px;
+            border: 2px solid rgb(112, 112, 126);
+            background-color: antiquewhite;
+            clear: both;
+            color:rgb(0, 0, 0);
+            border-radius: 15px;
+            opacity: 0.9;
+            /* float: left; */
+        }
+        .enter_bar{
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            position:sticky;
+            bottom:0;
+            
+            /* width: 60%; */
+            width:100%;
+            margin-top: 23px;
+            margin-bottom: 14px;
+            /* margin-left: 5px; */
+            height: 30px;
+        }
+        .enter_bar input{
+            width: 60%;
+            /* width: 70%; */
+            margin-right:10px;
+            /* height: 20px; */
+        }
+    </style>
 </head>
 <body>
-        <div class="head">
-            <h1>This world is mine </h1>
+<div class="container">
+    <div class="logo">
+        <img src="logo.png" alt=""> 
+    </div>
+    <div class="ui">
+        <div class="right">
+            <p>good morning</p>
         </div>
+        <div class="left">
+            <p> same to you champ </p>
+        </div>
+        <div class="left">
+            <p> same to you champ </p>
+        </div>
+        <div class="left">
+            <p> same to you champ </p>
+        </div>
+        <div class="left">
+            <p> same to you champ </p>
+        </div>
+        <div class="left">
+            <p> same to you champ </p>
+        </div>
+        
+        
+        
+    </div>
+    <div class="enter_bar">
+        <input type="text" placeholder="enter_message" id="messageInp">
+        <button>send</button>
+    </div>
+    
+
+
+</div>
 </body>
 </html>
