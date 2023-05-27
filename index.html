@@ -1,6 +1,7 @@
 <!-- this file has been modified by dj -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,97 +12,111 @@
     <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
     <script defer src="client.js"></script>
     <style>
-        *{
+        * {
             box-sizing: border-box;
         }
-        .container{
+
+        .container {
             border: 3px solid green;
-            background:linear-gradient(white,rgb(77, 77, 236)) ;
+            background: linear-gradient(white, rgb(77, 77, 236));
             width: 60%;
             margin: auto;
-            min-height: 60vh;
-            margin-bottom:30px;
+            height: 80vh;
+            margin-bottom: 30px;
             overflow-y: auto;
 
         }
-        .logo{
-            width:60%;
+
+        .logo {
+            width: 60%;
             height: 100px;
             border: 2px solid red;
             margin: auto;
             display: flex;
             justify-content: center;
         }
-        .logo img{
+
+        .logo img {
             width: 100px;
+            /* width: 60%; */
         }
-        .right{
+
+        .right {
             width: 35%;
             margin-top: 10px;
             border: 2px solid blue;
             background-color: antiquewhite;
             float: right;
             clear: both;
-            color:rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
             border-radius: 15px;
             opacity: 0.9;
+            padding-left: 6px;
         }
-        .left{
+
+        .left {
             width: 35%;
             margin-top: 10px;
             border: 2px solid rgb(112, 112, 126);
             background-color: antiquewhite;
             clear: both;
-            color:rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
             border-radius: 15px;
             opacity: 0.9;
+            padding-left: 6px;
             /* float: left; */
         }
-        .enter_bar{
+
+         #enter_bar{ 
             /* border: 2px solid black; */
             display: flex;
             justify-content: center;
             position:sticky;
             bottom:0;
-            
-            /* width: 60%; */
-            width:100%;
-            margin-top: 23px;
-            margin-bottom: 14px;
-            /* margin-left: 5px; */
-            height: 30px;
+            width: 100%;
+        margin-top: 23px;
+        margin-bottom: 14px;
+        margin-left: 5px;
+        height: 30px;
         }
-        .enter_bar input{
-            width: 60%;
+
+        #enter_bar input {
+            width: 50%;
             /* width: 70%; */
-            margin-right:10px;
-            /* height: 20px; */
+            margin-right: 10px;
+            height: 40px;
+            border-radius: 11px;
+
         }
+        #enter_bar button{
+            height: 40px;
+            border-radius: 11px;
+        }
+        
     </style>
 </head>
+
 <body>
-<div class="container">
-    <div class="logo">
-        <img src="logo.png" alt=""> 
-    </div>
-    <div class="ui">
-        <div class="right">
-            <p>good morning</p>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="">
         </div>
-        <div class="left">
-            <p> same to you champ </p>
+        <div class="ui">
+
+
+
         </div>
-        
-        
-        
     </div>
-    <div class="enter_bar">
-        <input type="text" placeholder="enter_message" id="messageInp">
-        <button>send</button>
-    </div>
+        <!-- <div class="send-container"> -->
+            <form action="#" id="enter_bar">
+                <input type="text" name="messageInp" placeholder="enter_message" id="messageInp">
+                <button type="submit">send</button>
+            </form>
+        <!-- </div> -->
+
+
+
     
-
-
-</div>
 </body>
+
 </html>

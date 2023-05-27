@@ -8,12 +8,15 @@ const users = {};
     socket.on('new-user-joined',name=>{
         users[socket.id]=name;
         socket.broadcast.emit('user-joined',name);
-        console.log(name);
+        // console.log(name);
     });
     socket.on('send',message=>{
         socket.broadcast.emit('receive',{message:message,name:users[socket.id]});
 
     });
+    socket.on('disconnect',(e)=>{
+        socket.broadcast.emit('left',users[socket.id]);
+    })
 
 
 
